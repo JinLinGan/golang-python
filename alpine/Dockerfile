@@ -63,3 +63,6 @@ RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
 WORKDIR $GOPATH
 
 RUN apk add --no-cache git
+
+# add dep 
+RUN go get -u -v github.com/golang/dep/cmd/dep
